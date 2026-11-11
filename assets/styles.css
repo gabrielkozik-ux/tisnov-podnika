@@ -254,12 +254,17 @@ section { padding: 88px 0; }
 .cta-band p { color: #c9d9d1; max-width: 34em; margin: 0 auto 1.6em; }
 
 /* Patička */
-.site-footer { background: var(--ink); color: #b8c6bf; padding: 44px 0; font-size: .93rem; }
-.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 40px; }
-.site-footer a { color: var(--paper); }
-.site-footer .brand span { color: var(--paper); font-size: 1.1rem; }
-.site-footer p { margin: .4em 0 0; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; }
+.site-footer { background: var(--ink); color: #b8c6bf; font-size: .93rem; }
+.site-footer a { color: #e8efe9; text-decoration: none; }
+.site-footer a:hover { color: var(--amber-light, #f3c46e); text-decoration: underline; }
+.site-footer .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px 48px; padding-top: 48px; padding-bottom: 36px; }
+.footer-brand { max-width: 380px; }
+.footer-brand .brand span { color: var(--paper); font-size: 1.15rem; }
+.footer-brand p { margin: 12px 0 0; line-height: 1.55; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 24px 64px; }
+.footer-nav div { display: flex; flex-direction: column; gap: 8px; }
+.footer-nav h2 { font-family: var(--sans); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-light, #f3c46e); margin: 0 0 4px; }
+.site-footer .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 18px; padding-bottom: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: .82rem; color: #8fa39a; }
 
 /* Textová podstránka */
 .prose { max-width: 760px; margin: 0 auto; padding: 56px 20px 88px; }
