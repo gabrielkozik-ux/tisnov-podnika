@@ -1,4 +1,4 @@
-const COUNTER_API_URL = 'https://script.google.com/macros/s/AKfycbx-zjYF9ujaahSRr6k270D5Ktzfw6ZFI17AJiBlNcQDR9u3TpkwJLnjbz-jo_riFFIV/exec';
+const COUNTER_API_URL = 'https://script.google.com/macros/s/AKfycby8033UJlVM1Xbf4G8wXyad68jYrCUZVnlGW62pIJRYVgPhoXbdOUNsYU7-wJy0QhwT/exec';
 
 async function updateFirmCounter() {
   const el = document.getElementById('pocet-firem');
