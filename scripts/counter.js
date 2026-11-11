@@ -5,21 +5,23 @@ async function updateFirmCounter() {
   if (!el) return;
 
   const cached = sessionStorage.getItem('tisnov_count');
-  if (cached) {
+  if (cached && Number(cached) > 0) {
     el.textContent = cached;
     return;
   }
 
   try {
-    const res = await fetch(COUNTER_API_URL);
+    const res = await fetch(COUNTER_API_URL, { redirect: 'follow' });
     const data = await res.json();
     if (data.count !== undefined) {
       el.textContent = data.count;
-      sessionStorage.setItem('tisnov_count', data.count);
+      if (data.count > 0) {
+        sessionStorage.setItem('tisnov_count', data.count);
+      }
     }
   } catch (e) {
-    // Při výpadku zůstane výchozí číslo z HTML
+    console.error('Chyba načítání počítadla:', e);
   }
 }
 
-document.addEventListener('DOMContentLoaded', updateFirmCounter);
+updateFirmCounter();
