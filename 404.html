@@ -5,15 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stránka nenalezena – Tišnov podniká</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f7f4ec; color: #142621;
+           font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; text-align: center; padding: 24px; }
+    .e { font-size: .78rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: #2f7f8a; }
+    h1 { font-family: Georgia, serif; font-size: clamp(1.8rem, 5vw, 2.6rem); margin: .4em 0; }
+    p { color: #55665f; }
+    a { display: inline-block; margin-top: 1.2em; background: #e0a43a; color: #142621; font-weight: 650;
+        text-decoration: none; padding: .8em 1.4em; border-radius: 999px; box-shadow: 0 2px 0 #b97f1c; }
+  </style>
 </head>
 <body>
-<main class="prose" style="text-align:center;padding-top:120px">
-  <span class="eyebrow">Chyba 404</span>
+<main>
+  <div class="e">Chyba 404</div>
   <h1>Tahle stránka tu není</h1>
-  <p class="meta">Možná jste přišli přes starý odkaz. Dotazník najdete na úvodní stránce.</p>
-  <p style="margin-top:2em"><a class="btn" href="/">Na úvod</a></p>
+  <p>Možná jste přišli přes starý odkaz. Dotazník najdete na úvodní stránce.</p>
+  <a id="home" href="/">Na úvod</a>
 </main>
+<script>
+  // funguje na vlastní doméně (/) i na GitHub Pages (/tisnov-podnika/)
+  var p = location.pathname.split('/')[1];
+  if (location.hostname.endsWith('github.io') && p) document.getElementById('home').href = '/' + p + '/';
+</script>
 </body>
 </html>
