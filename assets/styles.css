@@ -278,6 +278,9 @@ section { padding: 88px 0; }
 .footer-nav h2 { font-family: var(--sans); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-light, #f3c46e); margin: 0 0 4px; }
 .site-footer .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 18px; padding-bottom: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: .82rem; color: #8fa39a; }
 
+.site-footer .footer-credit { flex-basis: 100%; }
+.site-footer .footer-credit a { color: #c9d9d1; text-decoration: underline; text-underline-offset: 2px; }
+
 /* Textová podstránka */
 .prose { max-width: 760px; margin: 0 auto; padding: 56px 20px 88px; }
 .prose h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); }
