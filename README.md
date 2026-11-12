@@ -70,3 +70,10 @@ web/
 - `_headers` čte jen Cloudflare. GitHub Pages ho ignoruje (náhled funguje, jen bez CSP).
 - `.nojekyll` vypíná Jekyll na GitHub Pages (jinak by ignoroval soubory začínající `_`).
 - Lokální náhled: ve složce spustit `python -m http.server` a otevřít http://localhost:8000
+
+## Mezipaměť (důležité)
+
+`_headers` nastavuje pro `/assets/*` mezipaměť na 7 dní. Po změně `styles.css` proto
+**vždy zvyš číslo verze v odkazu** v obou HTML souborech:
+`assets/styles.css?v=20261112` → `?v=20261120` (stačí dnešní datum). Totéž u
+`scripts/counter.js?v=…`. Bez toho prohlížeče, které web už navštívily, ukazují starý vzhled.
