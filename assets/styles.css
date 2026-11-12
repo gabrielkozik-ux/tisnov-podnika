@@ -206,6 +206,16 @@ section { padding: 88px 0; }
   padding: 12px; max-width: 720px; margin: 0 auto;
 }
 .form-card iframe { width: 100%; height: 860px; border: 0; border-radius: 12px; display: block; }
+.bonus {
+  max-width: 720px; margin: 0 auto 28px; padding: 20px 24px;
+  background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--amber);
+  border-radius: var(--radius);
+}
+.bonus-tag { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-deep); }
+.bonus h3 { margin: 4px 0 8px; }
+.bonus ul { margin: 0 0 10px; padding-left: 1.2em; }
+.bonus p { margin: 0; color: var(--muted); font-size: .95rem; }
+@media (max-width: 640px) { .bonus { padding: 16px 16px; } }
 .form-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 0 auto 24px; text-align: center; }
 .form-actions span { color: var(--muted); font-size: .9rem; }
 .form-placeholder {
