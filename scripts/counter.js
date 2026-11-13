@@ -3,8 +3,14 @@ const COUNTER_API_URL = 'https://script.google.com/macros/s/AKfycby8033UJlVM1Xbf
 const COUNTER_KEY = 'tisnov_count_v2';
 const COUNTER_TTL = 60 * 1000; // uložené číslo považujeme za čerstvé 60 s
 
+const MIN_ZOBRAZIT = 25; // pod tímto počtem místo čísla ukážeme „Zapojují se první firmy“
+
 function showCount(el, n) {
-  el.textContent = n;
+  const box = document.querySelector('.counter');
+  if (!box) return;
+  box.innerHTML = n < MIN_ZOBRAZIT
+    ? '<span class="dot"></span>Zapojují se první firmy'
+    : '<span class="dot"></span>Zapojilo se už <strong id="pocet-firem">' + n + '</strong> firem';
 }
 
 async function updateFirmCounter() {

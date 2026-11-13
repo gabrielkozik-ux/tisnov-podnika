@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tišnov podniká – průzkum mezi podnikateli Tišnovska</title>
-  <meta name="description" content="Krátký průzkum mezi podnikateli z Tišnova a okolí. 4 minuty, 15 otázek. Výsledky předáme vedení města a pošleme je každému, kdo se zapojí.">
+  <meta name="description" content="Krátký průzkum mezi podnikateli z Tišnova a okolí. 4 minuty, 16 otázek. Výsledky předáme vedení města a pošleme je každému, kdo se zapojí.">
   <link rel="canonical" href="https://tisnovpodnika.cz/">
   <meta name="theme-color" content="#173f34">
 
@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=20261113b">
+  <link rel="stylesheet" href="assets/styles.css?v=20261113c">
 </head>
 <body>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
@@ -78,13 +78,16 @@
         <p class="lead">Krátký průzkum mezi podnikateli z Tišnova a okolí. Výsledky předáme vedení města a pošleme je každému, kdo se zapojí.</p>
         <div class="hero-actions">
           <a class="btn" href="#dotaznik">Vyplnit dotazník <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <!-- Počítadlo: přepisovat ručně 1× týdně -->
+          <!-- Počítadlo: číslo z Apps Scriptu; pod prahem (scripts/counter.js, MIN_ZOBRAZIT) se ukáže „Zapojují se první firmy“ -->
           <span class="counter"><span class="dot"></span>Zapojilo se už <strong id="pocet-firem">…</strong> firem</span>
         </div>
       </div>
+      <!-- ZAPOJENÉ FIRMY: jen ty, které ve formuláři zaškrtly souhlas se zveřejněním názvu.
+           Doplň názvy oddělené „ · “ a smaž atribut hidden. -->
+      <p class="zapojeni" hidden><span>Už se zapojili:</span> [Firma A] · [Firma B] · [Firma C]</p>
       <ul class="facts" aria-label="Průzkum v číslech">
         <li><b>4</b><span>minuty na vyplnění</span></li>
-        <li><b>15</b><span>otázek, většina na zaškrtnutí</span></li>
+        <li><b>16</b><span>otázek, většina na zaškrtnutí</span></li>
         <li><b>jaro</b><span>2027 výsledky a setkání s městem</span></li>
       </ul>
     </div>
@@ -304,16 +307,27 @@
       <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center">
         <span class="eyebrow">Dotazník</span>
         <h2 id="dotaznik-title">Máte 4 minuty?</h2>
-        <p>Odpovědi zpracováváme důvěrně a zveřejňujeme jen souhrnně.</p>
+        <p>Odpovědi vidí jen tři lidé z týmu. Město dostane jen souhrn.</p>
+      </div>
+      <div class="data-path" aria-labelledby="data-title">
+        <h3 id="data-title">Kde vaše odpovědi skončí</h3>
+        <ol>
+          <li><b>Ve formuláři Google.</b> Odpovědi se uloží do tabulky na našem účtu Google, nikam jinam.</li>
+          <li><b>Uvidí je jen tři lidé.</b> Gabriel Kožík, Monika Janíčková a Jindřich Sedlák. Nikdo další, ani město, ani partneři.</li>
+          <li><b>Město dostane jen souhrn.</b> Čísla za skupiny firem. Skupiny pod 5 odpovědí samostatně neuvádíme a citace upravíme tak, aby nešlo poznat, kdo je napsal.</li>
+          <li><b>Pak smažeme, kdo jste.</b> Do 31. 12. 2027 vymažeme IČO, názvy a kontakty. Zůstanou jen anonymní odpovědi.</li>
+        </ol>
+        <p>Data neprodáváme, nepředáváme pro marketing a nepoužijeme je k nabízení služeb. <a href="zpracovani-udaju.html">Podrobně o zpracování údajů</a></p>
       </div>
       <aside class="bonus" aria-labelledby="bonus-title">
         <span class="bonus-tag">Poděkování za vyplnění</span>
         <h3 id="bonus-title">Balíček „AI ve firmě“</h3>
         <ul>
           <li>jednostránkový tahák, jak bezpečně používat AI ve firmě (PDF),</li>
-          <li>vzor interních pravidel používání AI k úpravě pro vaši firmu (Word).</li>
+          <li>12stránkový vzor interních pravidel používání AI k úpravě pro vaši firmu (Word).</li>
         </ul>
-        <p>Pošleme ho e-mailem, pokud si ho na konci dotazníku zaškrtnete a uvedete <b>IČO a e-mail</b>. IČO ověříme v rejstříku ARES, na jedno IČO pošleme nejvýš tři balíčky. Jde o obecné vzory, ne o právní službu.</p>
+        <p class="bonus-author">Připravil advokát Mgr. Gabriel Kožík, který se věnuje právu a umělé inteligenci.</p>
+        <p>Pošleme ho e-mailem, pokud na konci dotazníku zvolíte <b>„Ano, chci balíček“</b> a vyplníte IČO a e-mail. IČO ověříme v rejstříku ARES, na jedno IČO pošleme nejvýš tři balíčky. Jde o obecné vzory, ne o právní službu.</p>
       </aside>
       <div class="form-actions">
         <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfd_j7xZmK52_cejAnsFtzk-m5cvb_ZTknBNj3Xup1VNatrFA/viewform" target="_blank" rel="noopener">Otevřít dotazník na celou obrazovku</a>
@@ -352,11 +366,15 @@
         </details>
         <details>
           <summary>Kdo dostane balíček?</summary>
-          <p>Každý, kdo dotazník vyplní, na konci si balíček zaškrtne a uvede IČO a e-mail. IČO ověříme ve veřejném rejstříku ARES. Na jedno IČO pošleme nejvýš tři balíčky. Balíček odejde automaticky obvykle do pár minut, jinak do týdne.</p>
+          <p>Každý, kdo dotazník vyplní, na konci zvolí „Ano, chci balíček“ a vyplní IČO a e-mail. IČO ověříme ve veřejném rejstříku ARES. Na jedno IČO pošleme nejvýš tři balíčky. Balíček odejde automaticky obvykle do pár minut, jinak do týdne.</p>
         </details>
         <details>
           <summary>Je to politické?</summary>
-          <p>Ne. Ptáme se stejně na to, co funguje, i na to, co ne. Výsledky dostane vedení města dřív než veřejnost.</p>
+          <p>Ne. Nepodporujeme žádnou stranu ani kandidáta. Na radnici nejdeme bojovat, ale hledat shodu. Ptáme se stejně na to, co funguje, i na to, co ne. Výsledky dostane vedení města dřív než veřejnost.</p>
+        </details>
+        <details>
+          <summary>Budete časem něco prodávat?</summary>
+          <p>Spolek bude mít členské příspěvky a některé akce, třeba odborné semináře, budou placené, protože stojí peníze. Průzkum, jeho výsledky a setkání s městem zůstanou zdarma. Vyplněním dotazníku se k ničemu nezavazujete a nikdo vám kvůli němu nebude nic nabízet.</p>
         </details>
         <details>
           <summary>Co se stane s výsledky?</summary>
@@ -366,14 +384,32 @@
     </div>
   </section>
 
+  <!-- VIDEO: až bude hotové, ulož assets/video/uvod.mp4 (do 20 MB), náhled assets/video/uvod.jpg
+       a titulky assets/video/uvod.vtt, pak odkomentuj blok níže.
+  <section class="video-sec" aria-labelledby="video-title">
+    <div class="wrap">
+      <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center">
+        <span class="eyebrow">Proč to děláme</span>
+        <h2 id="video-title">Za minutu vysvětlíme proč</h2>
+      </div>
+      <video class="intro-video" controls preload="none" playsinline poster="assets/video/uvod.jpg">
+        <source src="assets/video/uvod.mp4" type="video/mp4">
+        <track kind="captions" src="assets/video/uvod.vtt" srclang="cs" label="Čeština" default>
+      </video>
+    </div>
+  </section>
+  -->
+
   <!-- KDO -->
   <section id="kdo" aria-labelledby="kdo-title">
     <div class="wrap team">
       <div>
         <span class="eyebrow">Kdo za tím stojí</span>
         <h2 id="kdo-title">Podnikatelé, firmy a veřejnost</h2>
-        <p style="color:var(--muted)">Průzkum je prvním projektem vznikajícího spolku Proud Tišnovska. Chceme tlumočit potřeby podnikatelů městu, pořádat odborné semináře s lidmi z regionu a dávat prostor i podnětům veřejnosti. Obchodní networking nedělá.</p>
-        <p><a class="btn btn--ghost btn--small" href="mailto:info@gabrielkozik.cz">Napište nám</a></p>
+        <p><b>Nezačínáme od nuly.</b> Projekt vyrostl z několika let pravidelného setkávání místních podnikatelů: na podnikatelských setkáních, v kavárně a coworku Na Svratce, kde se dopoledne přirozeně potkávají lidé z různých oborů, a na prvních oborových setkáních gastro podniků Tišnovsko na talíři. Z těch rozhovorů vzešel průzkum i spolek Proud Tišnovska, který právě zakládáme.</p>
+        <p style="color:var(--muted)">Chceme tlumočit potřeby podnikatelů městu a hledat s vedením města shodu, pořádat praktické semináře s odborníky z regionu a propojovat lidi ze stejných oborů, aby mohli něco vytvořit společně. Nejsme politický projekt a nikoho nepodporujeme.</p>
+        <p><b>Chcete spolek tvořit s námi?</b> Hledáme podnikatele, kteří chtějí přiložit ruku k dílu.</p>
+        <p><a class="btn btn--ghost btn--small" href="mailto:info@gabrielkozik.cz?subject=Chci%20se%20zapojit%20do%20spolku%20Proud%20Ti%C5%A1novska">Chci se zapojit</a></p>
       </div>
       <ul class="people">
         <li><img class="avatar-img" src="assets/img/jindrich-sedlak.webp" width="64" height="64" alt="Jindřich Sedlák" loading="lazy"><div><b>Jindřich Sedlák</b><small>garant průzkumu</small></div></li>
@@ -430,6 +466,6 @@
   })();
 </script>
 
-<script src="scripts/counter.js?v=20261112c" defer></script>
+<script src="scripts/counter.js?v=20261113c" defer></script>
 </body>
 </html>
